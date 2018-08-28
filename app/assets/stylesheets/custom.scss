@@ -34,6 +34,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  margin-left: 100px;
 }
 
 h2 {
@@ -52,20 +53,14 @@ p {
 
 /* header */
 
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
+.logo {
+  width: 200px;
+  height: 100px;
+  margin-left: 50px;
 }
 
-#logo:hover {
-  color: #fff;
-  text-decoration: none;
+.logo:hover {
+  cursor: pointer;
 }
 
 .row {
@@ -84,6 +79,8 @@ p {
 .column img {
   margin-top: 8px;
   vertical-align: middle;
+  height: 175px;
+  width: 175px;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -100,4 +97,59 @@ p {
     flex: 100%;
     max-width: 100%;
   }
+}
+
+.course_box{
+  margin-top: 8px;
+  vertical-align: middle;  
+  margin-left: 200px;
+  
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.upload-preview{margin-bottom: 10px;}
+
+.list-block ul li{list-style-type:none;display:inline-block;margin:0 0 5px;}
+ ul.nav-tabs{margin:0 0 10px;}
+
+ .save_image_layout {
+  height: 100px;
+    width: 150px;
 }

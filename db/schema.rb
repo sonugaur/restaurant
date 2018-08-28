@@ -12,10 +12,27 @@
 
 ActiveRecord::Schema.define(version: 20180827171044) do
 
-# Could not dump table "courses" because of following StandardError
-#   Unknown type 'uuid' for column 'id'
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+  enable_extension "uuid-ossp"
+  enable_extension "pgcrypto"
 
-# Could not dump table "dishes" because of following StandardError
-#   Unknown type 'uuid' for column 'id'
+  create_table "courses", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
+  create_table "dishes", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "image"
+    t.string "name"
+    t.string "description"
+    t.float "price"
+    t.uuid "course_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_dishes_on_course_id"
+  end
+
+  add_foreign_key "dishes", "courses"
 end

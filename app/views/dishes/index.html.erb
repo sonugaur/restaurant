@@ -1,17 +1,63 @@
 <div class="row"> 
+<img src="/assets/courses_logo.jpg" class="logo">
   <div class="column">
-    <img src="/assets/chameli_dallas_menu.png">
-    <img src="/assets/chameli_dallas_menu.png">
-    <img src="/assets/chameli_dallas_menu.png">
+    <div class="course_box">
+      <img src="/assets/appetizer.jpg">
+      <center><%= @course[0].try(:name) %></center>
+      <%= link_to "Add New Dish", new_dish_path(id: @course[0].try(:id)), class: "btn btn-default"%>
+      <%= link_to "Dishes", dish_list_dishes_path(id: @course[0].try(:id)), :method => 'post', class: "btn btn-default"%>
+    </div>
+    <div class="course_box">
+      <img src="/assets/chicken.jpg">
+      <center><%= @course[1].try(:name)%></center>
+      <%= link_to "Add New Dish", new_dish_path(id: @course[1].try(:id)), class: "btn btn-default"%>
+      <%= link_to "Dishes", dish_list_dishes_path(id: @course[1].try(:id)), :method => 'post', class: "btn btn-default"%>
+    </div>
+    <div class="course_box">  
+      <img src="/assets/soup.jpg">
+      <center><%= @course[2].try(:name)%></center>
+      <%= link_to "Add New Dish", new_dish_path(id: @course[2].try(:id)), class: "btn btn-default"%>
+      <%= link_to "Dishes", dish_list_dishes_path(id: @course[2].try(:id)), :method => 'post', class: "btn btn-default"%>
+    </div>
   </div>
   <div class="column">
-    <img src="/assets/chameli_dallas_menu.png">
-    <img src="/assets/chameli_dallas_menu.png">
-    <img src="/assets/chameli_dallas_menu.png">
+    <div class="course_box">
+      <img src="/assets/sinigang.jpg">
+      <center><%= @course[3].try(:name)%></center>
+      <%= link_to "Add New Dish", new_dish_path(id: @course[3].try(:id)), class: "btn btn-default"%>
+      <%= link_to "Dishes", dish_list_dishes_path(id: @course[3].try(:id)), :method => 'post', class: "btn btn-default"%>
+    </div>
+    <div class="course_box">
+      <img src="/assets/vegetables.jpg">
+      <center><%= @course[4].try(:name)%></center>
+      <%= link_to "Add New Dish", new_dish_path(id: @course[4].try(:id)), class: "btn btn-default"%>
+      <%= link_to "Dishes", dish_list_dishes_path(id: @course[4].try(:id)), :method => 'post', class: "btn btn-default"%>
+    </div>
+    <div class="course_box">  
+      <img src="/assets/vegetarian.jpg">
+      <center><%= @course[5].try(:name)%></center>
+      <%= link_to "Add New Dish", new_dish_path(id: @course[5].try(:id)), class: "btn btn-default"%>
+      <%= link_to "Dishes", dish_list_dishes_path(id: @course[5].try(:id)), :method => 'post', class: "btn btn-default"%>
+    </div>
   </div>
    <div class="column">
-    <img src="/assets/chameli_dallas_menu.png">
-    <img src="/assets/chameli_dallas_menu.png">
-    <img src="/assets/chameli_dallas_menu.png">
+    <div class="course_box">
+      <img src="/assets/rice.jpg">
+      <center><%= @course[6].try(:name)%></center>
+      <%= link_to "Add New Dish", new_dish_path(id: @course[6].try(:id)), class: "btn btn-default"%>
+      <%= link_to "Dishes", dish_list_dishes_path(id: @course[6].try(:id)), :method => 'post', class: "btn btn-default"%>
+    </div>
+    <div class="course_box">
+      <img src="/assets/noodles.jpg">
+      <center><%= @course[7].try(:name)%></center>
+      <%= link_to "Add New Dish", new_dish_path(id: @course[7].try(:id)), class: "btn btn-default"%>
+      <%= link_to "Dishes", dish_list_dishes_path(id: @course[7].try(:id)), :method => 'post', class: "btn btn-default"%>
+    </div>
+    <div class="course_box">  
+      <img src="/assets/desserts.jpg">
+      <center><%= @course[8].try(:name)%></center>
+      <%= link_to "Add New Dish", new_dish_path(id: @course[8].try(:id)), class: "btn btn-default"%>
+      <%= link_to "Dishes", dish_list_dishes_path(id: @course[8].try(:id)), :method => 'post', class: "btn btn-default"%>
+    </div>
   </div>
 </div>

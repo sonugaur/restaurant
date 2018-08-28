@@ -1,0 +1,15 @@
+<div class="list-block">
+	  <ul>
+	  <% @dishes.each do |dish| %>
+		<li>
+		  <div>
+		    <%= dish.present? ? image_tag(dish.try(:image).try(:url),:width => 400, :height => 300, :class => 'save_image_layout') : image_tag("/assets/1.png",:width => 400, :height => 300, :class => 'save_image_layout') %>
+		    <%= dish.try(:name)%>  
+		    <%= dish.try(:description)%>
+		    <%= dish.try(:price)%> 
+		  </div>
+		</li>
+	 </ul>
+	<%= link_to "Edit", edit_dish_path(id: dish.id), class: "btn btn-default"%>
+	 <% end %>
+</div>

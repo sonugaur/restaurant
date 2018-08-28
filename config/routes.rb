@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :dishes do
         collection do
-         
+         post :dish_list
         end
       end
 end
