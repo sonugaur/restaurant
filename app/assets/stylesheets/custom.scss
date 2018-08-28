@@ -30,11 +30,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 4em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
-  margin-left: 100px;
+  margin-left: 0px;
+  font-weight: bold
 }
 
 h2 {
@@ -54,6 +55,7 @@ p {
 /* header */
 
 .logo {
+  padding-top: 10px;
   width: 200px;
   height: 100px;
   margin-left: 50px;
@@ -64,6 +66,7 @@ p {
 }
 
 .row {
+  background-color: #E3DAD8;
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
@@ -74,13 +77,14 @@ p {
   flex: 25%;
   max-width: 25%;
   padding: 0 4px;
+  margin-bottom: 15px;
 }
 
 .column img {
   margin-top: 8px;
   vertical-align: middle;
   height: 175px;
-  width: 175px;
+  width: 185px;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -100,7 +104,7 @@ p {
 }
 
 .course_box{
-  margin-top: 8px;
+  margin-top: 25px;
   vertical-align: middle;  
   margin-left: 200px;
   
@@ -153,3 +157,7 @@ label {
   height: 100px;
     width: 150px;
 }
+
+.center_name{margin-right: 100px;font-weight: bold;font-size: 20px;}
+
+.error{color: red;margin-top: 0px;}

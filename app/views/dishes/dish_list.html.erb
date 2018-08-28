@@ -1,5 +1,5 @@
 <div class="list-block">
-	  <ul>
+	<ul>
 	  <% @dishes.each do |dish| %>
 		<li>
 		  <div>
@@ -9,7 +9,7 @@
 		    <%= dish.try(:price)%> 
 		  </div>
 		</li>
-	 </ul>
-	<%= link_to "Edit", edit_dish_path(id: dish.id), class: "btn btn-default"%>
+	<%= link_to "Edit", dish_path(id: dish.id), method: :get, class: "btn btn-default"%>
 	 <% end %>
+  </ul>	 
 </div>

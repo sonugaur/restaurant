@@ -16,8 +16,8 @@
 //= require_tree .
 
 $(document).ready(function(){
-    var preview = $(".upload-preview img");
 
+    var preview = $(".upload-preview img");
     $(".file").change(function(event){
        var input = $(event.currentTarget);
        var file = input[0].files[0];
@@ -28,5 +28,53 @@ $(document).ready(function(){
        };
        reader.readAsDataURL(file);
     });
+
+
+    $("#validate_dish").validate({
+    // Specify the validation rules
+    rules: {
+      "dish[name]": {
+          required: true,
+          minlength: 3,
+          maxlength: 50
+      },
+      "dish[description]": {
+          maxlength: 250
+      },
+      "dish[price]": {
+          required: true,
+          minlength: 3,
+          maxlength: 15
+      },
+     
+    },
+    submitHandler: function(form) {
+      form.submit();
+    }
+  });
+
+
+   $("#edit_dish_validate").validate({
+    // Specify the validation rules
+    rules: {
+      "dish[name]": {
+          required: true,
+          minlength: 3,
+          maxlength: 50
+      },
+      "dish[description]": {
+          maxlength: 250
+      },
+      "dish[price]": {
+          required: true,
+          minlength: 3,
+          maxlength: 15
+      },
+     
+    },
+    submitHandler: function(form) {
+      form.submit();
+    }
+  }); 
 });
 

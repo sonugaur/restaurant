@@ -1,7 +1,6 @@
-
 <center><h1>Dish</h1></center>
 <div class="container">
-  <%= form_for @dish, :url => dish_path(@dish), html: {id: "", class: "",autocomplete: 'off'} do |f|%>
+  <%= form_for @dish, :url => dish_path(@dish), method: :put, html: {id: "edit_dish_validate", class: "",autocomplete: 'off'} do |f|%>
   <% if @dish.image.present? %>
     <div class="upload-preview">
       <%= image_tag(@dish.image.try(:url),:width => 200, :height => 100) %>
