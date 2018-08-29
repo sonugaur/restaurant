@@ -5,7 +5,6 @@
 
 body {
   background-color: #E3DAD8;
-  //background-image:url(/assets/background.jpeg);
 }
 head {
   background-color: #E3DAD8;
@@ -153,14 +152,51 @@ label {
 
 .upload-preview{margin-bottom: 10px;}
 
-.list-block ul li{list-style-type:none;display:inline-block;margin:0 0 5px;}
- ul.nav-tabs{margin:0 0 10px;}
+.list-block ul li{
+list-style-type:none;
+display:inline-block;
+margin:0 0 5px;
+}
+
+ul.nav-tabs{
+margin:0 0 10px;
+}
 
  .save_image_layout {
   height: 100px;
-    width: 150px;
+  width: 150px;
 }
 
-.center_name{margin-right: 100px;font-weight: bold;font-size: 20px;}
+.center_name{
+margin-right: 100px;
+font-weight: bold;
+font-size: 20px;
+}
 
-.error{color: red;margin-top: 0px;}
+.error{
+color: red;
+margin-top: 0px;
+}
+
+table tr,table tr td,table tr th {
+    border: 1px solid #570303 !important;
+}
+table tr td a {
+  color: #000;
+  text-decoration: none !important;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.table {
+    width: 96%!important;
+    max-width: 77%!important;
+    margin-bottom: -1px;
+}
+
+.menu_logo{ padding-top: 10px;
+  width: 200px;
+  height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;}

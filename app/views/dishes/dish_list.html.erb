@@ -1,37 +1,28 @@
-<html>
-<head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<div class="row"> 
-<img src="/assets/Dishes.jpg" class="logo">
+<div class="row_table"> 
+	<img src="/assets/menu.png" class="menu_logo">
+	<center>
+		<table class="table table-hover table-bordered" >
+			<th>Image</th>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Price</th>
+			<div class="row_table"> 
+		      <% @dishes.each do |dish| %>
+				<div class="list-block">
+					<div class="column">
+				        <div class="course_box">
+						    <tr>
+							    <td><%= dish.present? ? image_tag(dish.try(:image).try(:url),:width => 400, :height => 300, :class => 'save_image_layout') : image_tag("/assets/1.png",:width => 400, :height => 300, :class => 'save_image_layout') %></td>
+							    <td><%= link_to dish.try(:name),dish_path(id: dish.id), method: :get %></td>  
+							    <td><%= dish.try(:description)%></td>
+							    <td><%= dish.try(:price)%></td>
+						   </tr>
+						  </div>
+						</div>
+				</div>
+		     <% end %> 
+			</div>
+			</div>
+		</table>
+    </center>
 </div>
-</head>
-<body style="background-color: #E3DAD8;">
-<center>
-<table class="table table-hover table-bordered" >
-<th>Dish Image</th>
-<th>Dish Name</th>
-<th>Dish Description</th>
-<th>Dish Price</th>
-<div class="row"> 
-<% @dishes.each do |dish| %>
-<div class="list-block">
-		  <div class="column">
-          <div class="course_box">
-          <center class="center_name">
-		    <tr>
-		    <td><%= dish.present? ? image_tag(dish.try(:image).try(:url),:width => 400, :height => 300, :class => 'save_image_layout') : image_tag("/assets/1.png",:width => 400, :height => 300, :class => 'save_image_layout') %> </center> </td>
-		    <td><%= link_to dish.try(:name),dish_path(id: dish.id), method: :get %></td>  
-		    <td><%= dish.try(:description)%></td>
-		    <td><%= dish.try(:price)%></td>
-		     
-		</tr>
-		  </div>
-		</div>
-</div>
-	<% end %> 
-</div>
-</div>
-</table>
-</center>
-</body>
-</html>

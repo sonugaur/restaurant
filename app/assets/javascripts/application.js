@@ -46,12 +46,8 @@ $(document).ready(function(){
       "dish[price]": {
           required: true,
           number: true,
-          maxlength: 15
-      },
-      "dish[image]": {
-        required: true,
-        accept:"jpg,png,jpeg,gif"
-      },
+          maxlength: 5
+      }
     },
     submitHandler: function(form) {
       form.submit();
@@ -76,9 +72,9 @@ $(document).ready(function(){
       },
       "dish[price]": {
           required: true,
-          minlength: 3,
-          maxlength: 15
-      },
+          number: true,
+          maxlength: 5
+      }
      
     },
     submitHandler: function(form) {
