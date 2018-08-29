@@ -11,7 +11,7 @@
     </div>
     <div>
       <label>Name</label>
-      <%= f.text_field :name, placeholder: "Dish name.."%>
+      <%= f.text_field :name, placeholder: "Dish name..", required: true%>
     </div>
     <div>
       <label>Description</label>
@@ -19,7 +19,7 @@
     </div>
     <div>
       <label>Price</label>
-      <%= f.text_field :price, placeholder: "0.0"%>
+      <%= f.text_field :price, placeholder: "0.0", required: true%>
     </div>
     <input type="submit" value="Submit">
   <%end%>
