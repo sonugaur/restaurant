@@ -1,4 +1,11 @@
-<center><h1>Dish</h1></center>
+<html>
+<head>
+<div class="row"> 
+<img src="/assets/Dishes.jpg" class="logo">
+<center><h1 style="margin-left: 500px;">Dish</h1></center>
+</div>
+</head>
+<body> 
 <div class="container">
   <%= form_for :dish, url: dishes_path, html: {id: "validate_dish", autocomplete: 'off'} do |f|%>
     <%= f.hidden_field :course_id, :value => params[:id] %>
@@ -24,3 +31,6 @@
     <input type="submit" value="Submit">
   <%end%>
 </div>
+</body>
+</html>
+

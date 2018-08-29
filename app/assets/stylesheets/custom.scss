@@ -4,7 +4,11 @@
 /* universal */
 
 body {
-  padding-top: 60px;
+  background-color: #E3DAD8;
+  //background-image:url(/assets/background.jpeg);
+}
+head {
+  background-color: #E3DAD8;
 }
 
 section {
@@ -141,7 +145,6 @@ input[type=submit]:hover {
 }
 
 label {
-    display: inline-block;
     max-width: 100%;
     margin-bottom: 5px;
     font-weight: bold;

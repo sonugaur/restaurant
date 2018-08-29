@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require rails-ujs
-//= require turbolinks
 //= require_tree .
 
 $(document).ready(function(){
@@ -31,6 +30,9 @@ $(document).ready(function(){
 
 
     $("#validate_dish").validate({
+       errorPlacement: function (error, element) {
+       error.insertAfter(element);
+       },
     // Specify the validation rules
     rules: {
       "dish[name]": {
@@ -43,10 +45,13 @@ $(document).ready(function(){
       },
       "dish[price]": {
           required: true,
-          minlength: 3,
+          number: true,
           maxlength: 15
       },
-     
+      "dish[image]": {
+        required: true,
+        accept:"jpg,png,jpeg,gif"
+      },
     },
     submitHandler: function(form) {
       form.submit();
@@ -55,6 +60,10 @@ $(document).ready(function(){
 
 
    $("#edit_dish_validate").validate({
+       //Error Placement
+       errorPlacement: function (error, element) {
+       error.insertBefore(element);
+       },
     // Specify the validation rules
     rules: {
       "dish[name]": {
